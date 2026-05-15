@@ -23,8 +23,13 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/criadora.jpg" />
+
+  <!-- Fonts: display=swap evita FOIT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -310,31 +315,80 @@
     .kit-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
     .kit-card p { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
-    /* ── PREVIEW (GALERIA) ── */
-    .preview { background: #fff; padding: 56px 16px; }  /* branco — igual ao original */
-    .preview-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      max-width: 900px;
-      margin: 0 auto 16px;
-    }
-    .preview-grid .p-item {
-      border-radius: 10px;
+    /* ── PREVIEW — CARROSSEL ── */
+    .preview { background: #fff; padding: 56px 16px; }
+    .carousel-wrap { max-width: 680px; margin: 0 auto 16px; }
+    .carousel {
+      position: relative;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 3px 14px rgba(0,0,0,0.10);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      aspect-ratio: 1 / 1;
+      background: #f0f0f0;
     }
-    .preview-grid .p-item img {
+    .carousel-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+      will-change: transform;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+    }
+    .carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    .preview-grid .p-item.tall { display: none; }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.88);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 2;
+      color: var(--text);
+      transition: background 0.2s;
+    }
+    .carousel-btn:hover { background: #fff; }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 14px;
+    }
+    .carousel-dots button {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: #d1d5db;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .carousel-dots button.active {
+      background: var(--coral);
+      transform: scale(1.35);
+    }
     .preview-note {
       text-align: center;
       font-size: 13px;
       color: var(--muted);
+      margin-top: 6px;
     }
     .preview-note strong { color: var(--blue); }
 
@@ -631,7 +685,7 @@
 
       .kits-grid { grid-template-columns: 1fr 1fr; }
 
-      .preview-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      /* preview grid removido — carrossel responsivo por padrão */
 
       .steps-grid { flex-direction: row; gap: 20px; }
       .step-card { flex-direction: column; align-items: center; text-align: center; }
@@ -661,11 +715,6 @@
 
       .kits-grid { grid-template-columns: repeat(3, 1fr); }
 
-      .preview-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto;
-      }
-      .preview-grid .p-item.tall { display: block; grid-row: span 2; }
 
       .t-grid { grid-template-columns: repeat(3, 1fr); }
 
@@ -690,7 +739,7 @@
     <a href="#planos" class="btn-cta">Quiero mi kit por $9 →</a>
     <p class="hero-guarantee">⬇ Descarga inmediata &nbsp;·&nbsp; 🔒 Compra segura &nbsp;·&nbsp; 🛡️ Garantía 7 días</p>
     <div class="hero-img">
-      <img src="assets/criadora.png" alt="Maestra sosteniendo las actividades impresas" />
+      <img src="assets/criadora.jpg" alt="Maestra sosteniendo las actividades impresas" width="400" height="420" fetchpriority="high" />
     </div>
   </div>
 </section>
@@ -745,7 +794,7 @@
 <section class="product">
   <div class="product-inner">
     <div class="product-img">
-      <img src="assets/mockup.png" alt="Kit de actividades — vista del material completo" />
+      <img src="assets/mockup.jpg" alt="Kit de actividades — vista del material completo" width="450" height="450" loading="lazy" />
     </div>
     <div class="product-text">
       <div class="tag">Lo que vas a recibir</div>
@@ -780,19 +829,28 @@
   </div>
 </section>
 
-<!-- ── PREVIEW / GALERIA ── -->
+<!-- ── PREVIEW / CARROSSEL ── -->
 <section class="preview">
   <div class="container">
     <h2 class="sec-title">Dale un vistazo al material 👀</h2>
     <p class="sec-sub">Estas son solo algunas páginas — hay mucho más dentro del kit.</p>
-    <div class="preview-grid">
-      <div class="p-item tall"><img src="assets/criadora.png" alt="Maestra con el material" /></div>
-      <div class="p-item"><img src="assets/atividade3.png" alt="Actividad 1° grado — La abeja" /></div>
-      <div class="p-item"><img src="assets/atividade4.png" alt="Actividad 2° grado — La aventura de Lia" /></div>
-      <div class="p-item"><img src="assets/atividade5.png" alt="Actividad 3° grado — La niña y el libro" /></div>
-      <div class="p-item"><img src="assets/atividade6.png" alt="Actividad 4° grado — La idea que fue solución" /></div>
-      <div class="p-item"><img src="assets/atividade7.png" alt="Actividad 5° grado — Farmar Aura" /></div>
-      <div class="p-item"><img src="assets/impressora.png" alt="Material impreso listo para usar" /></div>
+    <div class="carousel-wrap">
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><img src="assets/slide-flyer.jpg"   alt="Material de Interpretación de Textos" width="680" height="680" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="assets/slide-maestra.jpg" alt="267+ actividades listas para imprimir" width="680" height="680" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="assets/impressora.jpg"    alt="Material impreso listo para usar"      width="680" height="680" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="assets/mockup.jpg"        alt="Kit completo — producto físico"        width="680" height="680" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Anterior">&#8249;</button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente">&#8250;</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots">
+        <button class="active" data-idx="0" aria-label="Slide 1"></button>
+        <button data-idx="1" aria-label="Slide 2"></button>
+        <button data-idx="2" aria-label="Slide 3"></button>
+        <button data-idx="3" aria-label="Slide 4"></button>
+      </div>
     </div>
     <p class="preview-note">📖 <strong>¡Hay mucho más dentro del kit!</strong> Estas son solo algunas muestras.</p>
   </div>
@@ -1015,6 +1073,7 @@
 </section>
 
 <script>
+  /* ── FAQ ── */
   function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
     const isOpen = answer.classList.contains('open');
@@ -1022,6 +1081,48 @@
     document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
     if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
   }
+
+  /* ── CARROSSEL ── */
+  (function() {
+    const track   = document.getElementById('carouselTrack');
+    const dots    = document.querySelectorAll('#carouselDots button');
+    const total   = dots.length;
+    let   current = 0;
+    let   timer;
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAuto() { timer = setInterval(next, 3500); }
+    function stopAuto()  { clearInterval(timer); }
+
+    document.getElementById('carouselNext').addEventListener('click', function(){ stopAuto(); next(); startAuto(); });
+    document.getElementById('carouselPrev').addEventListener('click', function(){ stopAuto(); prev(); startAuto(); });
+    dots.forEach(function(d) {
+      d.addEventListener('click', function(){ stopAuto(); goTo(+this.dataset.idx); startAuto(); });
+    });
+
+    /* Swipe touch */
+    let tx = 0;
+    const el = document.getElementById('carousel');
+    el.addEventListener('touchstart', function(e){ tx = e.touches[0].clientX; }, { passive: true });
+    el.addEventListener('touchend',   function(e){
+      const diff = tx - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { stopAuto(); diff > 0 ? next() : prev(); startAuto(); }
+    }, { passive: true });
+
+    /* Pausar ao hover */
+    el.addEventListener('mouseenter', stopAuto);
+    el.addEventListener('mouseleave', startAuto);
+
+    startAuto();
+  })();
 </script>
 
 </body>
