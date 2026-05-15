@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>267+ Actividades de Comprensión y Producción de Textos — 1° al 5° Grado</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3170239859826175');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3170239859826175&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    /* ── Utilitários ── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+    .text-center { text-align: center; }
+    .section { padding: 64px 20px; }
+    .section-alt { background: #f7f8fc; padding: 64px 20px; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, #eef2ff 0%, #fdf4ff 50%, #fff8f0 100%);
+      padding: 72px 20px 60px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid #e0e0f0;
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #5c5f8a;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #1a1a2e;
+      max-width: 780px;
+      margin: 0 auto 20px;
+    }
+    .hero h1 span { color: #4f6ef7; }
+    .hero-sub {
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: #555570;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #4f6ef7;
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 18px rgba(79,110,247,0.35);
+    }
+    .btn-primary:hover { background: #3a5be8; transform: translateY(-2px); }
+    .hero-note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* ── PROBLEMAS ── */
+    .problems-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+      color: #1a1a2e;
+    }
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .problem-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+    .problem-card .icon { font-size: 32px; margin-bottom: 12px; }
+    .problem-card h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+    .problem-card p { font-size: 13px; color: #666; line-height: 1.55; }
+
+    /* ── PARA QUEM ── */
+    .for-whom-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .for-whom-list {
+      list-style: none;
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .for-whom-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      color: #333;
+    }
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      background: #4f6ef7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* ── BENEFÍCIOS ── */
+    .benefits-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .benefits-title span { color: #4f6ef7; }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .benefit-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    }
+    .benefit-card .icon { font-size: 28px; margin-bottom: 12px; }
+    .benefit-card h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+    .benefit-card p { font-size: 13px; color: #666; line-height: 1.55; }
+
+    /* ── CONTEÚDO DOS KITS ── */
+    .kits-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .kits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .kit-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .kit-card .icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .kit-card h3 { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
+    .kit-card p { font-size: 13px; color: #666; line-height: 1.5; }
+
+    /* ── PREVIEW ── */
+    .preview-section {
+      text-align: center;
+      padding: 64px 20px;
+    }
+    .preview-title {
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 800;
+      margin-bottom: 36px;
+    }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      max-width: 860px;
+      margin: 0 auto 24px;
+    }
+    .preview-card {
+      background: linear-gradient(135deg, #eef2ff 0%, #f0f4ff 100%);
+      border-radius: 12px;
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .preview-note { font-size: 14px; color: #666; }
+    .preview-note span { color: #4f6ef7; font-weight: 600; }
+
+    /* ── PASSOS ── */
+    .steps-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .step-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    }
+    .step-number {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #4f6ef7, #7b5ea7);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-card h3 { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+    .step-card p { font-size: 13px; color: #666; }
+
+    /* ── BÔNUS ── */
+    .bonus-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .bonus-list {
+      max-width: 700px;
+      margin: 0 auto 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .bonus-item {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .bonus-item.premium { border-left: 4px solid #f5a623; }
+    .bonus-item .icon { font-size: 26px; flex-shrink: 0; }
+    .bonus-item-content {}
+    .bonus-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #4f6ef7;
+      margin-bottom: 4px;
+    }
+    .bonus-label.premium-label { color: #f5a623; }
+    .bonus-item h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+    .bonus-item p { font-size: 13px; color: #666; margin-bottom: 6px; }
+    .bonus-value { font-size: 12px; color: #999; }
+    .bonus-footer {
+      text-align: center;
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    /* ── DEPOIMENTO DESTAQUE ── */
+    .highlight-testimonial {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 48px 20px;
+    }
+    .quote-icon { font-size: 36px; margin-bottom: 16px; }
+    .highlight-testimonial blockquote {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .testimonial-author { font-size: 14px; color: #888; font-weight: 600; }
+
+    /* ── DEPOIMENTOS ── */
+    .testimonials-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    }
+    .stars { color: #f5a623; font-size: 16px; margin-bottom: 14px; }
+    .testimonial-card p { font-size: 14px; color: #444; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .testimonial-card .author { font-size: 13px; font-weight: 700; color: #1a1a2e; }
+    .testimonial-card .location { font-size: 12px; color: #999; }
+
+    /* ── PLANOS ── */
+    .plans-section { padding: 72px 20px; background: linear-gradient(160deg, #f7f8fc, #fdf4ff); }
+    .plans-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .plans-subtitle { text-align: center; color: #666; font-size: 15px; margin-bottom: 48px; }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 760px;
+      margin: 0 auto;
+      align-items: start;
+    }
+    .plan-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 36px 28px;
+      box-shadow: 0 8px 36px rgba(0,0,0,0.10);
+      position: relative;
+    }
+    .plan-card.featured {
+      border: 2px solid #4f6ef7;
+      box-shadow: 0 12px 48px rgba(79,110,247,0.2);
+    }
+    .plan-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #f5a623, #f7c948);
+      color: #7a4a00;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 18px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .plan-name { font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 4px; }
+    .plan-desc { font-size: 13px; color: #888; margin-bottom: 20px; }
+    .plan-old-price { text-decoration: line-through; color: #bbb; font-size: 14px; }
+    .plan-price { font-size: 38px; font-weight: 800; color: #4f6ef7; line-height: 1; margin-bottom: 6px; }
+    .plan-price span { font-size: 20px; }
+    .plan-savings {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .plan-features {
+      list-style: none;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .plan-features li {
+      font-size: 13.5px;
+      color: #333;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .plan-features li .ok { color: #4f6ef7; font-weight: 700; flex-shrink: 0; }
+    .plan-features li .no { color: #ccc; flex-shrink: 0; }
+    .btn-plan {
+      display: block;
+      text-align: center;
+      background: #4f6ef7;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 16px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 18px rgba(79,110,247,0.35);
+      margin-bottom: 14px;
+    }
+    .btn-plan:hover { background: #3a5be8; transform: translateY(-2px); }
+    .btn-plan-secondary {
+      display: block;
+      text-align: center;
+      background: transparent;
+      color: #4f6ef7;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 2px solid #4f6ef7;
+      transition: all 0.2s;
+      margin-bottom: 14px;
+    }
+    .btn-plan-secondary:hover { background: #f0f3ff; }
+    .plan-trust { font-size: 11.5px; color: #aaa; text-align: center; }
+    .plan-suggest { text-align: center; margin-top: 12px; }
+    .plan-suggest a { font-size: 13px; color: #4f6ef7; text-decoration: underline; }
+
+    /* ── GARANTIA ── */
+    .guarantee-section {
+      padding: 64px 20px;
+      text-align: center;
+      background: #fff;
+    }
+    .guarantee-icon { font-size: 52px; margin-bottom: 16px; }
+    .guarantee-title { font-size: clamp(22px, 4vw, 30px); font-weight: 800; margin-bottom: 16px; color: #1a1a2e; }
+    .guarantee-text { font-size: 16px; color: #555; max-width: 540px; margin: 0 auto; line-height: 1.7; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 64px 20px; background: #f7f8fc; }
+    .faq-title { font-size: clamp(22px, 4vw, 30px); font-weight: 800; text-align: center; margin-bottom: 40px; }
+    .faq-list {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a2e;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-question::after { content: '+'; font-size: 20px; color: #4f6ef7; flex-shrink: 0; }
+    .faq-question.open::after { content: '−'; }
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.65;
+    }
+    .faq-answer.open { display: block; }
+
+    /* ── CTA FINAL ── */
+    .final-cta {
+      padding: 80px 20px;
+      background: linear-gradient(160deg, #eef2ff 0%, #fdf4ff 100%);
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      color: #1a1a2e;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+    .final-cta p { font-size: 16px; color: #666; margin-bottom: 36px; }
+
+    /* ── RESPONSIVO ── */
+    @media (max-width: 600px) {
+      .section, .section-alt { padding: 48px 16px; }
+      .hero { padding: 56px 16px 48px; }
+      .plans-grid { grid-template-columns: 1fr; }
+      .kits-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ────────────────────── HERO ────────────────────── -->
+<section class="hero">
+  <div style="font-size:32px; margin-bottom:12px;">✏️ ⭐ 📚</div>
+  <div class="hero-badge">+500 maestras ya lo descargaron</div>
+  <h1>267+ actividades de comprensión y producción de textos — <span>del 1° al 5° grado</span> 📚</h1>
+  <p class="hero-sub">Material listo para imprimir, con textos que atrapan y actividades que hacen pensar de verdad a tus alumnos.</p>
+  <a href="#planos" class="btn-primary">Quiero mi kit por $9 →</a>
+  <p class="hero-note">⬇ Descarga inmediata después de la compra</p>
+</section>
+
+<!-- ────────────────────── PROBLEMAS ────────────────────── -->
+<section class="section-alt" id="para-quem">
+  <div class="container">
+    <h2 class="problems-title">¿Por qué encontrar buenos textos se volvió una pesadilla? 😩</h2>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="icon">😓</div>
+        <h3>Textos genéricos del buscador</h3>
+        <p>Pierdes horas buscando y no encuentras nada con calidad pedagógica real.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">😴</div>
+        <h3>Actividades que no enganchan</h3>
+        <p>Los alumnos las hacen por obligación. No hay comprensión real, solo copian el fragmento.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">😩</div>
+        <h3>Empezar de cero cada semana</h3>
+        <p>Armar actividades desde cero consume energía que necesitabas para enseñar.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">😰</div>
+        <h3>Fuera del plan de estudios</h3>
+        <p>Material bonito pero sin alineación curricular te deja insegura a la hora de aplicarlo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────── PARA QUEM ────────────────────── -->
+<section class="section">
+  <div class="container">
+    <h2 class="for-whom-title">Este kit fue hecho para ti si… 🎯</h2>
+    <ul class="for-whom-list">
+      <li>
+        <span class="check-icon">✓</span>
+        Quieres actividades de comprensión listas sin pasar horas buscando
+      </li>
+      <li>
+        <span class="check-icon">✓</span>
+        Quieres que tus alumnos desarrollen lectura y escritura de verdad, no que solo copien
+      </li>
+      <li>
+        <span class="check-icon">✓</span>
+        Necesitas material alineado al plan de estudios sin complicaciones
+      </li>
+      <li>
+        <span class="check-icon">✓</span>
+        Atiendes del 1° al 5° grado — o más de un grupo al mismo tiempo
+      </li>
+      <li>
+        <span class="check-icon">✓</span>
+        Estás cansada de improvisar la noche anterior a la clase
+      </li>
+      <li>
+        <span class="check-icon">✓</span>
+        Quieres ahorrar tiempo sin sacrificar la calidad pedagógica
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ────────────────────── BENEFÍCIOS ────────────────────── -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="benefits-title">No es solo material extra. <span>Es tu libertad de vuelta.</span> 🕊️</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="icon">✅</div>
+        <h3>267+ actividades listas</h3>
+        <p>Comprensión y producción de textos para todo el año — sin improvisar, sin buscar.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">✨</div>
+        <h3>Textos que realmente atrapan</h3>
+        <p>Seleccionados para cada nivel educativo, con preguntas que desarrollan el pensamiento.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">📦</div>
+        <h3>Del 1° al 5° grado en una sola compra</h3>
+        <p>Material completo para quien atiende más de un grupo o quiere tenerlo todo a la mano.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🖨️</div>
+        <h3>Listo para imprimir ahora</h3>
+        <p>PDF editable, funciona en cualquier impresora, a color o en blanco y negro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────── CONTEÚDO ────────────────────── -->
+<section class="section">
+  <div class="container">
+    <h2 class="kits-title">267+ actividades esperando por ti ✏️</h2>
+    <div class="kits-grid">
+      <div class="kit-card">
+        <div class="icon">📘</div>
+        <div>
+          <h3>Kit 1° Grado</h3>
+          <p>Textos cortos con preguntas de comprensión y propuestas de producción para quienes están comenzando a leer.</p>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="icon">📗</div>
+        <div>
+          <h3>Kit 2° Grado</h3>
+          <p>Actividades de comprensión más elaboradas y escritura creativa con apoyo visual.</p>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="icon">📙</div>
+        <div>
+          <h3>Kit 3° Grado</h3>
+          <p>Comprensión profundizada, producción argumentativa y desafíos de escritura para grupos en consolidación.</p>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="icon">📕</div>
+        <div>
+          <h3>Kit 4° Grado</h3>
+          <p>Textos más largos, inferencia y producción textual con inicio, desarrollo y cierre.</p>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="icon">📓</div>
+        <div>
+          <h3>Kit 5° Grado</h3>
+          <p>Comprensión avanzada, géneros variados y producción argumentativa para cerrar el ciclo de primaria.</p>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="icon">🎨</div>
+        <div>
+          <h3>Visual a color</h3>
+          <p>Ilustraciones que enganchan y motivan — listo para imprimir y aplicar el mismo día.</p>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="icon">📄</div>
+        <div>
+          <h3>PDF editable</h3>
+          <p>Personalízalo si quieres, o imprímelo tal cual está. Funciona en cualquier dispositivo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────── PREVIEW ────────────────────── -->
+<section class="preview-section">
+  <h2 class="preview-title">Dale un vistazo al material 👀</h2>
+  <div class="preview-grid">
+    <div class="preview-card">📖</div>
+    <div class="preview-card">✏️</div>
+    <div class="preview-card">📝</div>
+    <div class="preview-card">🖍️</div>
+    <div class="preview-card">📚</div>
+    <div class="preview-card">🎨</div>
+    <div class="preview-card">⭐</div>
+  </div>
+  <p class="preview-note">Estas son solo algunas páginas — <span>¡hay mucho más dentro del kit!</span> 📖</p>
+</section>
+
+<!-- ────────────────────── PASSOS ────────────────────── -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="steps-title">Tu clase lista en 3 pasos 🚀</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Compraste</h3>
+        <p>Acceso inmediato al archivo tras la confirmación del pago.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Imprimiste</h3>
+        <p>Funciona en cualquier impresora. A color o en blanco y negro, queda perfecto.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Aplicaste</h3>
+        <p>267+ actividades para trabajar todo el año sin improvisar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────── BÔNUS ────────────────────── -->
+<section class="section">
+  <div class="container">
+    <h2 class="bonus-title">Quien compra hoy lleva el doble 🎁</h2>
+    <div class="bonus-list">
+      <div class="bonus-item">
+        <div class="icon">📋</div>
+        <div class="bonus-item-content">
+          <div class="bonus-label">BONO</div>
+          <h3>Solucionario completo</h3>
+          <p>Todas las respuestas organizadas para corregir rápido y con seguridad.</p>
+          <div class="bonus-value">Valor: $9.90</div>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <div class="icon">📊</div>
+        <div class="bonus-item-content">
+          <div class="bonus-label">BONO</div>
+          <h3>Ficha de seguimiento de lectura</h3>
+          <p>Registro sencillo del progreso de cada alumno en comprensión y escritura.</p>
+          <div class="bonus-value">Valor: $7.90</div>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <div class="icon">📅</div>
+        <div class="bonus-item-content">
+          <div class="bonus-label">BONO</div>
+          <h3>Secuencia didáctica sugerida</h3>
+          <p>Cómo usar las 267+ actividades a lo largo del año sin perder el hilo pedagógico.</p>
+          <div class="bonus-value">Valor: $12.90</div>
+        </div>
+      </div>
+      <div class="bonus-item premium">
+        <div class="icon">📖</div>
+        <div class="bonus-item-content">
+          <div class="bonus-label premium-label">EXCLUSIVO PREMIUM</div>
+          <h3>Actividades de Lectura Fluida</h3>
+          <p>Secuencias de lectura progresiva para desarrollar fluidez, entonación y comprensión oral — del 1° al 5° grado.</p>
+          <div class="bonus-value">Valor: $14.90</div>
+        </div>
+      </div>
+      <div class="bonus-item premium">
+        <div class="icon">📝</div>
+        <div class="bonus-item-content">
+          <div class="bonus-label premium-label">EXCLUSIVO PREMIUM</div>
+          <h3>Tipos de Textos — 1° al 5° grado</h3>
+          <p>Actividades completas por género: fábula, poema, noticia, carta, cuento, tira cómica, receta y mucho más. Alineado al plan de estudios.</p>
+          <div class="bonus-value">Valor: $19.90</div>
+        </div>
+      </div>
+    </div>
+    <p class="bonus-footer">Todo esto incluido en tu kit hoy ✨</p>
+  </div>
+</section>
+
+<!-- ────────────────────── DEPOIMENTO DESTAQUE ────────────────────── -->
+<section class="section-alt">
+  <div class="highlight-testimonial">
+    <div class="quote-icon">💬</div>
+    <blockquote>
+      "Mi grupo avanzó muchísimo en lectura. Las actividades están muy bien elaboradas, los alumnos realmente comprenden — no solo copian. Me ahorro horas cada semana."
+    </blockquote>
+    <div class="testimonial-author">— Maestra Ana, 2° grado 👩‍🏫</div>
+  </div>
+</section>
+
+<!-- ────────────────────── DEPOIMENTOS ────────────────────── -->
+<section class="section">
+  <div class="container">
+    <h2 class="testimonials-title">Lo que dicen las maestras 💬</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"¡A mis alumnos les encantaron las actividades! El material es precioso y está súper bien organizado. Ahorré mucho tiempo en mi planeación."</p>
+        <div class="author">👩‍🏫 Ana García</div>
+        <div class="location">Ciudad de México, CDMX</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"¡La mejor inversión que hice! Los textos son perfectos para el nivel y las actividades son muy motivadoras. Totalmente alineadas con el plan de estudios."</p>
+        <div class="author">👩‍🏫 Carla Rodríguez</div>
+        <div class="location">Buenos Aires, Argentina</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"¡Lo recomiendo muchísimo! Material completo, bonito y práctico. Mis alumnos piden hacer las actividades todas las semanas."</p>
+        <div class="author">👩‍🏫 Valeria López</div>
+        <div class="location">Bogotá, Colombia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────── PLANOS ────────────────────── -->
+<section class="plans-section" id="planos">
+  <div class="container">
+    <h2 class="plans-title">Elige tu kit ✨</h2>
+    <p class="plans-subtitle">Empieza con lo esencial o llévalo todo de una sola vez</p>
+    <div class="plans-grid">
+
+      <!-- PREMIUM -->
+      <div class="plan-card featured">
+        <div class="plan-badge">⭐ MÁS VENDIDO</div>
+        <div class="plan-name">Kit Premium</div>
+        <div class="plan-desc">267+ actividades + bonos exclusivos</div>
+        <div class="plan-old-price">De $80.00</div>
+        <div class="plan-price"><span>$</span>26.90</div>
+        <div class="plan-savings">Ahorras $53.10</div>
+        <ul class="plan-features">
+          <li><span class="ok">✓</span> Todo el Kit Esencial</li>
+          <li><span class="ok">✓</span> ✨ BONO EXCLUSIVO: Actividades de Lectura Fluida (1° al 5° grado)</li>
+          <li><span class="ok">✓</span> ✨ BONO EXCLUSIVO: Tipos de Textos completos — fábula, poema, noticia, carta, cuento, tira cómica y más (1° al 5° grado)</li>
+          <li><span class="ok">✓</span> Alineado 100% al plan de estudios</li>
+          <li><span class="ok">✓</span> PDF editable — imprime las veces que quieras</li>
+          <li><span class="ok">✓</span> Acceso de por vida</li>
+        </ul>
+        <a href="https://checkout.doppus.app/15560917?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=" class="btn-plan">🎯 Quiero el Kit Premium por $26.90 →</a>
+        <div class="plan-trust">🔒 Compra segura · Descarga inmediata · Garantía de 7 días</div>
+      </div>
+
+      <!-- ESSENCIAL -->
+      <div class="plan-card">
+        <div class="plan-name">Kit Esencial</div>
+        <div class="plan-desc">&nbsp;</div>
+        <div class="plan-old-price">De $35.00</div>
+        <div class="plan-price"><span>$</span>9</div>
+        <div style="height:28px"></div>
+        <ul class="plan-features">
+          <li><span class="ok">✓</span> 267+ actividades de comprensión y producción de textos</li>
+          <li><span class="ok">✓</span> Del 1° al 5° grado</li>
+          <li><span class="ok">✓</span> PDF editable — imprime las veces que quieras</li>
+          <li><span class="ok">✓</span> Solucionario completo (Bono)</li>
+          <li><span class="ok">✓</span> Ficha de seguimiento de lectura (Bono)</li>
+          <li><span class="ok">✓</span> Secuencia didáctica sugerida (Bono)</li>
+          <li><span class="ok">✓</span> Acceso de por vida</li>
+          <li><span class="no">✗</span> Actividades de Lectura Fluida (1° al 5° grado)</li>
+          <li><span class="no">✗</span> Tipos de Textos completos — fábula, poema, noticia, carta, cuento y más</li>
+        </ul>
+        <a href="https://checkout.doppus.app/49532767?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=" class="btn-plan-secondary">Quiero el Kit Esencial →</a>
+        <div class="plan-suggest"><a href="#planos">Ver la oferta recomendada</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────── GARANTIA ────────────────────── -->
+<section class="guarantee-section">
+  <div class="container">
+    <div class="guarantee-icon">🛡️</div>
+    <h2 class="guarantee-title">El riesgo es todo nuestro</h2>
+    <p class="guarantee-text">Si descargas las 267+ actividades y no te gustan, solo escríbenos dentro de los 7 días y te devolvemos el 100% de tu dinero. Sin burocracia, sin preguntas.</p>
+  </div>
+</section>
+
+<!-- ────────────────────── FAQ ────────────────────── -->
+<section class="faq-section">
+  <div class="container">
+    <h2 class="faq-title">¿Dudas? Las respondo 😉</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Cómo recibo el material?</button>
+        <div class="faq-answer">Después de confirmar el pago, recibes acceso inmediato al archivo por correo electrónico y también puedes descargarlo directamente desde la página de confirmación. Todo de forma instantánea.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Necesito una impresora especial?</button>
+        <div class="faq-answer">No. El material funciona en cualquier impresora doméstica o de oficina, a color o en blanco y negro. El PDF está optimizado para ambas opciones y siempre queda bien.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Por cuánto tiempo tengo acceso?</button>
+        <div class="faq-answer">Tienes acceso de por vida. Una vez que compras, el material es tuyo para siempre. Puedes descargarlo y guardarlo en tu computadora o teléfono.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Puedo usarlo con más de un grupo?</button>
+        <div class="faq-answer">¡Sí! El PDF es editable e imprimible, así que puedes imprimir las copias que necesites para todos tus grupos. Sin restricciones.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────── CTA FINAL ────────────────────── -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Tus alumnos merecen actividades que los hagan crecer de verdad. ✨</h2>
+    <p>Y tú mereces una planeación sin estrés.</p>
+    <a href="https://checkout.doppus.app/49532767?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=" class="btn-primary">Garantizar mis 267 actividades por $9</a>
+  </div>
+</section>
+
+<script>
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+    if (!isOpen) {
+      answer.classList.add('open');
+      btn.classList.add('open');
+    }
+  }
+</script>
+
+</body>
+</html>
