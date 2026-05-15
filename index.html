@@ -35,16 +35,25 @@
       --purple:  #7209b7;
       --yellow:  #f8c537;
       --red:     #ef233c;
-      --gray-bg: #f8f9fb;
+      --gray-bg: #fcfbf7;
       --text:    #1a1a2e;
       --muted:   #6b7280;
       --radius:  14px;
       --shadow:  0 4px 24px rgba(0,0,0,0.08);
+
+      /* paleta original */
+      --peach:   #fcd3c5;
+      --honey:   #fbe7b6;
+      --lilac:   #e6d0f1;
+      --mint:    #c4eee7;
+      --cream:   #fcfbf7;
+      --teal-lt: rgba(46, 184, 161, 0.10);
+      --coral:   #ea3e5b;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #fff;
+      background: var(--cream);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -71,7 +80,7 @@
        HERO — coluna única centralizada
     ══════════════════════════════════════════ */
     .hero {
-      background: linear-gradient(160deg, #eef2ff 0%, #f5f0ff 55%, #fef9ec 100%);
+      background: var(--peach);
       padding: 48px 16px 0;
       overflow: hidden;
       text-align: center;
@@ -176,17 +185,19 @@
       margin: 0 auto;
     }
     .prob-card {
-      background: var(--gray-bg);
       border-radius: var(--radius);
       padding: 22px 18px;
-      border-top: 4px solid var(--red);
     }
+    .prob-card:nth-child(1) { background: var(--peach); }
+    .prob-card:nth-child(2) { background: var(--lilac); }
+    .prob-card:nth-child(3) { background: var(--honey); }
+    .prob-card:nth-child(4) { background: var(--mint); }
     .prob-card .ico { font-size: 26px; margin-bottom: 10px; }
     .prob-card h3 { font-size: 13.5px; font-weight: 700; margin-bottom: 6px; }
     .prob-card p { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
     /* ── PARA QUEM ── */
-    .for-whom { background: var(--gray-bg); padding: 56px 16px; }
+    .for-whom { background: var(--cream); padding: 56px 16px; }
     .for-whom-inner {
       max-width: 700px;
       margin: 0 auto;
@@ -214,7 +225,7 @@
     .fw-item span { font-size: 14px; color: #333; line-height: 1.5; }
 
     /* ── PRODUTO (MOCKUP) ── */
-    .product { background: #fff; padding: 56px 16px; }
+    .product { background: var(--honey); padding: 56px 16px; }
     .product-inner {
       max-width: 900px;
       margin: 0 auto;
@@ -278,7 +289,7 @@
     }
 
     /* ── KITS ── */
-    .kits { background: var(--gray-bg); padding: 56px 16px; }
+    .kits { background: var(--cream); padding: 56px 16px; }
     .kits-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -300,7 +311,7 @@
     .kit-card p { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
     /* ── PREVIEW (GALERIA) ── */
-    .preview { background: #fff; padding: 56px 16px; }
+    .preview { background: #fff; padding: 56px 16px; }  /* branco — igual ao original */
     .preview-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -328,7 +339,7 @@
     .preview-note strong { color: var(--blue); }
 
     /* ── PASSOS ── */
-    .steps { background: var(--gray-bg); padding: 56px 16px; }
+    .steps { background: var(--cream); padding: 56px 16px; }
     .steps-grid {
       display: flex;
       flex-direction: column;
@@ -359,7 +370,7 @@
     .step-card p { font-size: 13px; color: var(--muted); }
 
     /* ── BÔNUS ── */
-    .bonuses { background: #fff; padding: 56px 16px; }
+    .bonuses { background: #fff; padding: 56px 16px; }  /* branco — igual ao original */
     .bonuses-list {
       max-width: 720px;
       margin: 0 auto 28px;
@@ -400,7 +411,7 @@
     }
 
     /* ── DEPOIMENTO DESTAQUE ── */
-    .hero-testimonial { background: var(--gray-bg); padding: 52px 16px; }
+    .hero-testimonial { background: var(--coral); padding: 52px 16px; }
     .ht-inner {
       max-width: 600px;
       margin: 0 auto;
@@ -408,19 +419,19 @@
     }
     .ht-inner .quote {
       font-size: 36px; line-height: 1; margin-bottom: 14px;
-      color: var(--blue); opacity: .3;
+      color: #fff; opacity: .5;
     }
     .ht-inner blockquote {
       font-size: 16px;
       line-height: 1.7;
-      color: #333;
+      color: #fff;
       font-style: italic;
       margin-bottom: 16px;
     }
-    .ht-inner .author { font-size: 13px; font-weight: 600; color: var(--muted); }
+    .ht-inner .author { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); }
 
     /* ── DEPOIMENTOS ── */
-    .testimonials { background: #fff; padding: 56px 16px; }
+    .testimonials { background: var(--teal-lt); padding: 56px 16px; }
     .t-grid {
       display: flex;
       flex-direction: column;
@@ -439,7 +450,7 @@
     .t-card .city { font-size: 12px; color: var(--muted); }
 
     /* ── PLANOS ── */
-    .plans { background: var(--gray-bg); padding: 64px 16px; }
+    .plans { background: var(--teal-lt); padding: 64px 16px; }
     .plans-grid {
       display: flex;
       flex-direction: column;
@@ -534,7 +545,7 @@
     .plan-link a { font-size: 13px; color: var(--blue); text-decoration: underline; }
 
     /* ── GARANTIA ── */
-    .guarantee { background: #fff; padding: 52px 16px; }
+    .guarantee { background: #fff; padding: 52px 16px; }  /* branco — igual ao original */
     .guarantee-box {
       max-width: 560px;
       margin: 0 auto;
@@ -549,7 +560,7 @@
     .guarantee-box p { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
 
     /* ── FAQ ── */
-    .faq { background: var(--gray-bg); padding: 56px 16px; }
+    .faq { background: var(--cream); padding: 56px 16px; }
     .faq-list {
       max-width: 700px;
       margin: 0 auto;
@@ -592,12 +603,12 @@
 
     /* ── CTA FINAL ── */
     .final {
-      background: linear-gradient(160deg, #eef2ff 0%, #f5f0ff 55%, #fef9ec 100%);
+      background: var(--coral);
       padding: 64px 16px;
       text-align: center;
     }
-    .final h2 { font-size: 24px; font-weight: 900; line-height: 1.25; margin-bottom: 10px; }
-    .final p { font-size: 15px; color: var(--muted); margin-bottom: 28px; }
+    .final h2 { font-size: 24px; font-weight: 900; line-height: 1.25; margin-bottom: 10px; color: #fff; }
+    .final p { font-size: 15px; color: rgba(255,255,255,0.85); margin-bottom: 28px; }
     .final .btn-cta { margin: 0 auto; }
 
     /* ══════════════════════════════════════════
@@ -999,7 +1010,7 @@
   <div class="container">
     <h2>Tus alumnos merecen actividades que los hagan crecer de verdad. ✨</h2>
     <p>Y tú mereces una planeación sin estrés.</p>
-    <a href="https://pay.hotmart.com/E105842704U?off=de7zv3le" class="btn-cta" style="display:inline-flex;">Garantizar mis 267 actividades por $9 →</a>
+    <a href="https://pay.hotmart.com/E105842704U?off=de7zv3le" class="btn-cta" style="display:inline-flex; background:#fff; color:var(--coral);">Garantizar mis 267 actividades por $9 →</a>
   </div>
 </section>
 
