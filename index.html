@@ -503,13 +503,10 @@
     .t-card .author { font-size: 13px; font-weight: 700; }
     .t-card .city { font-size: 12px; color: var(--muted); }
 
-    /* ── PLANOS ── */
+    /* ── PLANO ÚNICO ── */
     .plans { background: var(--teal-lt); padding: 64px 16px; }
-    .plans-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      max-width: 640px;
+    .plan-solo-wrap {
+      max-width: 520px;
       margin: 0 auto;
     }
     .plan {
@@ -693,7 +690,7 @@
 
       .t-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 
-      .plans-grid { flex-direction: row; max-width: 780px; align-items: start; }
+      /* plano único — sem grid side-by-side */
 
       .final h2 { font-size: 30px; }
     }
@@ -974,55 +971,34 @@
   </div>
 </section>
 
-<!-- ── PLANOS ── -->
+<!-- ── PLANO ÚNICO ── -->
 <section class="plans" id="planos">
   <div class="container">
-    <h2 class="sec-title">Elige tu kit ✨</h2>
-    <p class="sec-sub">Empieza con lo esencial o llévalo todo de una sola vez</p>
-    <div class="plans-grid">
-
-      <!-- PREMIUM -->
+    <h2 class="sec-title">Accede a todo el material ✨</h2>
+    <p class="sec-sub">Un solo kit con todo lo que necesitas — sin complicaciones</p>
+    <div class="plan-solo-wrap">
       <div class="plan featured">
-        <div class="plan-badge">⭐ MÁS VENDIDO</div>
-        <div class="plan-name">Kit Premium</div>
-        <div class="plan-desc">267+ actividades + bonos exclusivos</div>
+        <div class="plan-badge">⭐ OFERTA ESPECIAL</div>
+        <div class="plan-name">Kit Completo</div>
+        <div class="plan-desc">267+ actividades + todos los bonos incluidos</div>
         <div class="plan-from">De $80.00</div>
-        <div class="plan-price"><sup>$</sup>26.90</div>
-        <div class="plan-saving">Ahorras $53.10</div>
-        <ul class="plan-feats">
-          <li><span class="ok">✓</span> Todo el Kit Esencial</li>
-          <li><span class="ok">✓</span> ✨ BONO: Actividades de Lectura Fluida (1° al 5°)</li>
-          <li><span class="ok">✓</span> ✨ BONO: Tipos de Textos — fábula, poema, noticia, carta, cuento, tira cómica y más</li>
-          <li><span class="ok">✓</span> Alineado 100% al plan de estudios</li>
-          <li><span class="ok">✓</span> PDF editable — imprime las veces que quieras</li>
-          <li><span class="ok">✓</span> Acceso de por vida</li>
-        </ul>
-        <a href="https://pay.hotmart.com/E105842704U?off=3zgkfg2v" class="btn-plan">🎯 Quiero el Kit Premium por $26.90 →</a>
-        <div class="plan-trust">🔒 Compra segura · Descarga inmediata · Garantía de 7 días</div>
-      </div>
-
-      <!-- ESENCIAL -->
-      <div class="plan">
-        <div class="plan-name">Kit Esencial</div>
-        <div class="plan-desc">&nbsp;</div>
-        <div class="plan-from">De $35.00</div>
         <div class="plan-price"><sup>$</sup>9</div>
-        <div style="height:28px"></div>
+        <div class="plan-saving">Ahorras $71.00</div>
         <ul class="plan-feats">
           <li><span class="ok">✓</span> 267+ actividades de comprensión y producción de textos</li>
-          <li><span class="ok">✓</span> Del 1° al 5° grado</li>
+          <li><span class="ok">✓</span> Del 1° al 5° grado en una sola compra</li>
           <li><span class="ok">✓</span> PDF editable — imprime las veces que quieras</li>
-          <li><span class="ok">✓</span> Solucionario completo (Bono)</li>
-          <li><span class="ok">✓</span> Ficha de seguimiento de lectura (Bono)</li>
-          <li><span class="ok">✓</span> Secuencia didáctica sugerida (Bono)</li>
+          <li><span class="ok">✓</span> Solucionario completo</li>
+          <li><span class="ok">✓</span> Ficha de seguimiento de lectura</li>
+          <li><span class="ok">✓</span> Secuencia didáctica sugerida</li>
+          <li><span class="ok">✓</span> ✨ Actividades de Lectura Fluida (1° al 5°)</li>
+          <li><span class="ok">✓</span> ✨ Tipos de Textos completos — fábula, poema, noticia, carta, cuento, tira cómica y más</li>
+          <li><span class="ok">✓</span> Alineado 100% al plan de estudios</li>
           <li><span class="ok">✓</span> Acceso de por vida</li>
-          <li><span class="no">✗</span> Actividades de Lectura Fluida</li>
-          <li><span class="no">✗</span> Tipos de Textos completos</li>
         </ul>
-        <a href="https://pay.hotmart.com/E105842704U?off=de7zv3le" class="btn-plan-alt">Quiero el Kit Esencial →</a>
-        <div class="plan-link"><a href="#planos">Ver la oferta recomendada</a></div>
+        <a href="https://pay.hotmart.com/E105842704U?off=de7zv3le" class="btn-plan">🎯 Quiero el kit completo por $9 →</a>
+        <div class="plan-trust">🔒 Compra segura · Descarga inmediata · Garantía de 7 días</div>
       </div>
-
     </div>
   </div>
 </section>
